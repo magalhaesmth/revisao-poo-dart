@@ -1,18 +1,20 @@
 main() {
-  var gastos = Gastos(valorGasolinaPorLitro: 7.00, mediaMinhaMoto: 39);
+  var gastos = Gastos(valorGasolinaPorLitro: 7.00, mediaConsumoMoto: 39);
   print("O valor pago pela gasolina é de: ${gastos.valorGasolinaPorLitro}");
-  print("A média que sua moto faz é de: ${gastos.mediaMinhaMoto}");
+  print("A média que sua moto faz é de: ${gastos.mediaConsumoMoto}");
   print(gastos.calculoGastoGasolinaLitro);
 }
 
+//Essa função retorna o valor de gasolina por km, por exemplo, se minha moto faz 38Km/l e eu pago R$6,75 no litro da gasolina, gasto entorno de R$0,17 por KM.
+
 class Gastos {
   double valorGasolinaPorLitro;
-  double mediaMinhaMoto;
+  double mediaConsumoMoto;
 
-  Gastos({required this.valorGasolinaPorLitro, required this.mediaMinhaMoto});
+  Gastos({required this.valorGasolinaPorLitro, required this.mediaConsumoMoto});
 
   double calculoGastoGasolinaLitro() {
-    var resultadoGasto = (valorGasolinaPorLitro / mediaMinhaMoto);
+    var resultadoGasto = (valorGasolinaPorLitro / mediaConsumoMoto);
     return resultadoGasto;
   }
 
